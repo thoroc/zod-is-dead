@@ -13,10 +13,9 @@ describe('Transport schema', () => {
         year: 2021,
         seatingCapacity: 5,
         bootSize: 15,
+        travelsOver: 'land',
       },
     };
-
-    console.log(transport);
 
     const anyOf = (AjvTransportSchema.schema.properties?.vehicle as { anyOf?: unknown[] })?.anyOf;
 
@@ -37,6 +36,7 @@ describe('Transport schema', () => {
         commercialCapacity: 6800,
         forwardCabin: faker.datatype.boolean(),
         wheels: 4,
+        travelsOver: 'land',
       },
     };
 

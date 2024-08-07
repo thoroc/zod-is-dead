@@ -12,6 +12,7 @@ describe('Transport schema', () => {
         year: 2021,
         seatingCapacity: 5,
         bootSize: 15,
+        travelsOver: 'land',
       },
     };
 
@@ -27,6 +28,7 @@ describe('Transport schema', () => {
         commercialCapacity: 6800,
         forwardCabin: faker.datatype.boolean(),
         wheels: 4,
+        travelsOver: 'land',
       },
     };
 

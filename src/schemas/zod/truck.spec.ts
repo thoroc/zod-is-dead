@@ -12,6 +12,7 @@ describe('Truck schema', () => {
       commercialCapacity: 1000,
       forwardCabin: faker.datatype.boolean(),
       wheels: 4,
+      travelsOver: 'land',
     };
 
     expect(ZodTruckSchema.parse(truck)).toEqual(truck);

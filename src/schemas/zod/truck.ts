@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ZodVehicleSchema } from './vehicle';
+import { ZodCommercialVehicleSchema } from './vehicle';
 
 /**
  * ZodTruckSchema represents the schema for a truck object.
@@ -10,11 +10,10 @@ import { ZodVehicleSchema } from './vehicle';
  */
 export const ZodTruckSchema = z
   .object({
-    commercialCapacity: z.number(),
     forwardCabin: z.boolean(),
     wheels: z.number(),
   })
-  .merge(ZodVehicleSchema);
+  .merge(ZodCommercialVehicleSchema);
 
 /**
  * Represents a truck schema defined using Zod.

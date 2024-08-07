@@ -1,5 +1,5 @@
 import { s } from 'ajv-ts';
-import { AjvVehicleSchema } from './vehicle';
+import { AjvCommercialVehicleSchema } from './vehicle';
 
 /**
  * AjvTruckSchema represents the schema for a truck.
@@ -8,11 +8,10 @@ import { AjvVehicleSchema } from './vehicle';
  */
 export const AjvTruckSchema = s
   .object({
-    commercialCapacity: s.number(),
     forwardCabin: s.boolean(),
     wheels: s.number(),
   })
-  .merge(AjvVehicleSchema);
+  .merge(AjvCommercialVehicleSchema);
 
 /**
  * Represents a truck schema defined using Ajv.
