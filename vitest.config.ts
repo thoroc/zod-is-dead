@@ -2,10 +2,9 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    reporters: ['default', 'json-summary', 'json'],
-    outputFile: 'converage/coverage-summary.json',
     coverage: {
       enabled: true,
+      reporter: ['json-summary', 'json', 'lcov'],
       provider: 'istanbul',
       thresholds: {
         lines: 60,
