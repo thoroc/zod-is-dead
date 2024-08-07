@@ -3,5 +3,23 @@
   "extends": [
     "config:recommended"
   ],
-  "autoApprove": true
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
+    }
+  ],
+  "autoApprove": true,
+  "automergeType": "branch"
 }
