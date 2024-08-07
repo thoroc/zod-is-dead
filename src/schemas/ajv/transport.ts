@@ -6,8 +6,8 @@ import { AjvTruckSchema } from './truck';
 // Transportation Schema
 // --------------------------------------------------
 
-export const AjvTransportationSchema = s.object({
+export const AjvTransportSchema = s.object({
   vehicle: s.union(AjvCarSchema, AjvTruckSchema),
 });
 
-export type Transportation = s.infer<typeof AjvTransportationSchema>;
+export type AjvTransport = s.infer<typeof AjvTransportSchema>;

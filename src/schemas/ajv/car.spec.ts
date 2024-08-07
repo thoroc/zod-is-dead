@@ -14,12 +14,6 @@ describe('Car schema', () => {
       bootSize: 500,
     };
 
-    console.log(car);
-
-    console.log('schema:', AjvCarSchema.schema);
-
-    console.log('_schema:', AjvCarSchema['_schema'].properties);
-
     purgeUnknowProperties(AjvCarSchema['_schema'].properties);
 
     expect(AjvCarSchema.parse(car)).toEqual(car);

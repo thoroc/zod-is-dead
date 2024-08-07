@@ -1,4 +1,4 @@
 export * from './car';
-export * from './transportation';
+export * from './transport';
 export * from './truck';
 export * from './vehicle';
