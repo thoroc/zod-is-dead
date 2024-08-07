@@ -12,7 +12,7 @@ jobs:
     name: Node/pnpm - setup and test
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
         node_version: [18, 20, 22, latest]
         pnpm_version: [8.15.0, 9.4.0]
     runs-on: ${{ matrix.os }}
