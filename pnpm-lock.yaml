@@ -25,9 +25,6 @@ devDependencies:
   '@vitest/coverage-istanbul':
     specifier: ^2.0.5
     version: 2.0.5(vitest@2.0.5)
-  '@vitest/coverage-v8':
-    specifier: ^2.0.5
-    version: 2.0.5(vitest@2.0.5)
   eslint:
     specifier: ^9.8.0
     version: 9.8.0
@@ -218,10 +215,6 @@ packages:
       '@babel/helper-string-parser': 7.24.8
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
-    dev: true
-
-  /@bcoe/v8-coverage@0.2.3:
-    resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
   /@esbuild/aix-ppc64@0.21.5:
@@ -845,28 +838,6 @@ packages:
       istanbul-lib-source-maps: 5.0.6
       istanbul-reports: 3.1.7
       magicast: 0.3.4
-      test-exclude: 7.0.1
-      tinyrainbow: 1.2.0
-      vitest: 2.0.5
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@vitest/coverage-v8@2.0.5(vitest@2.0.5):
-    resolution: {integrity: sha512-qeFcySCg5FLO2bHHSa0tAZAOnAUbp4L6/A5JDuj9+bt53JREl8hpLjLHEWF0e/gWc8INVpJaqA7+Ene2rclpZg==}
-    peerDependencies:
-      vitest: 2.0.5
-    dependencies:
-      '@ampproject/remapping': 2.3.0
-      '@bcoe/v8-coverage': 0.2.3
-      debug: 4.3.6
-      istanbul-lib-coverage: 3.2.2
-      istanbul-lib-report: 3.0.1
-      istanbul-lib-source-maps: 5.0.6
-      istanbul-reports: 3.1.7
-      magic-string: 0.30.11
-      magicast: 0.3.4
-      std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
       vitest: 2.0.5
