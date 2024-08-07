@@ -1,7 +1,10 @@
-name: Merge Request - Test
+name: Testing Pipeline
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
   pull_request:
+    branches:
+      - main
+  push:
     branches:
       - main
 
