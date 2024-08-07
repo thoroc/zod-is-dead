@@ -1,4 +1,4 @@
-name: Testing Pipeline
+name: Test
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
   pull_request:
@@ -11,32 +11,43 @@ on:
 run-name: Merge Request setup and test.
 
 jobs:
-  node:
+  test:
     name: Node/pnpm - setup and test
+
     strategy:
       matrix:
         os: [ubuntu-latest]
         node_version: [18, 20, 22, latest]
         pnpm_version: [8.15.0, 9.4.0]
+
     runs-on: ${{ matrix.os }}
+
+    permissions:
+      contents: read
+
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: ${{matrix.pnpm_version}}
+
       - name: Use Node.js ${{matrix.node_version}}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node_version }}
           cache: "pnpm"
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Run Tests
         run: pnpm run test
-      - name: Report Coverage
-        # Set if: always() to also generate the report if tests are failing
-        # Only works if you set `reportOnFailure: true` in your vite config as specified above
-        if: always() 
-        uses:  davelosert/vitest-coverage-report-action@v2
+
+      - name: Upload Coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage
