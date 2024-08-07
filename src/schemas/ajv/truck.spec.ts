@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { faker } from '@faker-js/faker';
 
 import { AjvTruck, AjvTruckSchema } from './truck';
+import { purgeUnknowProperties } from './fix';
 
 describe('Truck schema', () => {
   it('should validate a valid truck', () => {
@@ -14,7 +15,7 @@ describe('Truck schema', () => {
       wheels: 4,
     };
 
-    console.log(truck);
+    purgeUnknowProperties(AjvTruckSchema['_schema'].properties);
 
     expect(AjvTruckSchema.parse(truck)).toEqual(truck);
   });

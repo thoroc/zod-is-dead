@@ -7,6 +7,7 @@ export const AjvTruckSchema = s
     forwardCabin: s.boolean(),
     wheels: s.number(),
   })
-  .merge(AjvVehicleSchema);
+  .merge(AjvVehicleSchema)
+  .error('Could not parse the Truck schema');
 
 export type AjvTruck = s.infer<typeof AjvTruckSchema>;
