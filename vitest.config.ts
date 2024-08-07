@@ -12,6 +12,7 @@ export default defineConfig({
         functions: 60,
         statements: 60,
       },
+      reportOnFailure: true,
     },
     disableConsoleIntercept: true,
   },
