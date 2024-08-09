@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+
+import { purgeUnknowProperties } from './fix';
 import {
   AjvCargoPlane,
   AjvCargoPlaneSchema,
@@ -7,7 +9,6 @@ import {
   AjvPlane,
   AjvPlaneSchema,
 } from './plane';
-import { purgeUnknowProperties } from './fix';
 
 describe('Plane schema', () => {
   it('should validate a valid plane', () => {

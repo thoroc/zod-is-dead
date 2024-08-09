@@ -1,8 +1,9 @@
-import { describe, it, expect } from 'vitest';
 import { faker } from '@faker-js/faker';
 
-import { AjvTruck, AjvTruckSchema } from './truck';
+import { describe, expect, it } from 'vitest';
+
 import { purgeUnknowProperties } from './fix';
+import { AjvTruck, AjvTruckSchema } from './truck';
 
 describe('Truck schema', () => {
   it('should validate a valid truck', () => {

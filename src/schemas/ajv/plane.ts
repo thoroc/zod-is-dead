@@ -1,4 +1,5 @@
 import { s } from 'ajv-ts';
+
 import { AjvCommercialVehicleSchema, AjvPassengerVehicleSchema, AjvVehicleSchema } from './vehicle';
 
 /**

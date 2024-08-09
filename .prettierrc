@@ -6,10 +6,14 @@
   "printWidth": 120,
   "arrowParens": "always",
   "importOrder": [
+    "^\\w",
     "^[./]"
   ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ],
   "overrides": [
     {
       "files": [

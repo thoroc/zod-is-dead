@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
 import { faker } from '@faker-js/faker';
+
+import { describe, expect, it } from 'vitest';
 
 import { AjvCar, AjvCarSchema } from './car';
 import { purgeUnknowProperties } from './fix';

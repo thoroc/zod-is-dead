@@ -1,7 +1,8 @@
 import { z } from 'zod';
-import { ZodCarSchema, ZodCar } from './car';
-import { ZodTruckSchema, ZodTruck } from './truck';
+
+import { ZodCar, ZodCarSchema } from './car';
 import { ZodCargoPlane, ZodCargoPlaneSchema, ZodPassengerPlane, ZodPassengerPlaneSchema } from './plane';
+import { ZodTruck, ZodTruckSchema } from './truck';
 
 /**
  * Represents a transportation schema.

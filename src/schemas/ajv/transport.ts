@@ -1,7 +1,8 @@
 import { s } from 'ajv-ts';
+
 import { AjvCarSchema } from './car';
-import { AjvTruckSchema } from './truck';
 import { AjvCargoPlaneSchema, AjvPassengerPlaneSchema } from './plane';
+import { AjvTruckSchema } from './truck';
 
 // --------------------------------------------------
 // Transportation Schema

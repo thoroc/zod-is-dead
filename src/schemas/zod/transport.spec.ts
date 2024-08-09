@@ -1,7 +1,8 @@
-import { describe, it, expect } from 'vitest';
+import { faker } from '@faker-js/faker';
+
+import { describe, expect, it } from 'vitest';
 
 import { ZodTransport, ZodTransportSchema } from './transport';
-import { faker } from '@faker-js/faker';
 
 describe('Transport schema', () => {
   it('should validate a car as a valid transport', () => {

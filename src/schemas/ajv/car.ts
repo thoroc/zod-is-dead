@@ -1,4 +1,5 @@
 import { s } from 'ajv-ts';
+
 import { AjvPassengerVehicleSchema } from './vehicle';
 
 export const AjvCarSchema = s

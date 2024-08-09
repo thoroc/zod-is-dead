@@ -1,4 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { faker } from '@faker-js/faker';
+
+import { describe, expect, it } from 'vitest';
 
 import {
   ZodCommercialVehicle,
@@ -8,7 +10,6 @@ import {
   ZodVehicle,
   ZodVehicleSchema,
 } from './vehicle';
-import { faker } from '@faker-js/faker';
 
 describe('Vehicle schema', () => {
   it('should validate a valid vehicle', () => {
