@@ -1,5 +1,5 @@
 import { s } from 'ajv-ts';
-import { AjvPassengerVehicleSchema, AjvVehicleSchema } from './vehicle';
+import { AjvCommercialVehicleSchema, AjvPassengerVehicleSchema, AjvVehicleSchema } from './vehicle';
 
 /**
  * AjvPlaneSchema represents the schema for a plane object.
@@ -21,11 +21,7 @@ export type AjvPlane = s.infer<typeof AjvPlaneSchema>;
  * AjvCargoPlaneSchema represents the schema for a cargo plane in the Ajv library.
  * It includes the cargo capacity of the plane.
  */
-export const AjvCargoPlaneSchema = s
-  .object({
-    cargoCapacity: s.number(),
-  })
-  .merge(AjvPlaneSchema);
+export const AjvCargoPlaneSchema = AjvCommercialVehicleSchema.merge(AjvPlaneSchema);
 
 /**
  * Represents a AjvCargoPlane.

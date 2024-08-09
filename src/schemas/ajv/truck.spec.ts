@@ -10,7 +10,7 @@ describe('Truck schema', () => {
       make: faker.vehicle.manufacturer(),
       model: faker.vehicle.model(),
       year: 2020,
-      commercialCapacity: 1000,
+      cargoCapacity: 1000,
       forwardCabin: faker.datatype.boolean(),
       wheels: 4,
       travelsOver: 'land',

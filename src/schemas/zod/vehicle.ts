@@ -33,7 +33,7 @@ export type ZodPassengerVehicle = z.infer<typeof ZodPassengerVehicleSchema>;
  * Represents a schema for a commercial vehicle.
  */
 export const ZodCommercialVehicleSchema = ZodVehicleSchema.extend({
-  commercialCapacity: z.number(),
+  cargoCapacity: z.number(),
 });
 
 /**

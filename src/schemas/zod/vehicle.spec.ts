@@ -43,7 +43,7 @@ describe('Commercial vehicle schema', () => {
       make: faker.vehicle.manufacturer(),
       model: faker.vehicle.model(),
       year: 2020,
-      commercialCapacity: 1000,
+      cargoCapacity: 1000,
       travelsOver: faker.helpers.arrayElement(['land', 'sea', 'air']),
     };
 

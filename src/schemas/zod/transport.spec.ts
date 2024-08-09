@@ -25,10 +25,42 @@ describe('Transport schema', () => {
         make: faker.vehicle.manufacturer(),
         model: faker.vehicle.model(),
         year: 2021,
-        commercialCapacity: 6800,
+        cargoCapacity: 6800,
         forwardCabin: faker.datatype.boolean(),
         wheels: 4,
         travelsOver: 'land',
+      },
+    };
+
+    expect(ZodTransportSchema.parse(transport)).toEqual(transport);
+  });
+
+  it('should validate a passenger plane as a valid transport', () => {
+    const transport: ZodTransport = {
+      vehicle: {
+        make: 'Boeing',
+        model: '747',
+        year: 2021,
+        seatingCapacity: 150,
+        wingspan: 50,
+        engines: 4,
+        travelsOver: 'air',
+      },
+    };
+
+    expect(ZodTransportSchema.parse(transport)).toEqual(transport);
+  });
+
+  it('should validate a cargo plane as a valid transport', () => {
+    const transport: ZodTransport = {
+      vehicle: {
+        make: 'Boeing',
+        model: '747',
+        year: 2021,
+        cargoCapacity: 10000,
+        wingspan: 50,
+        engines: 4,
+        travelsOver: 'air',
       },
     };
 

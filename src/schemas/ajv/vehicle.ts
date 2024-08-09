@@ -33,7 +33,7 @@ export type AjvPassengerVehicle = s.infer<typeof AjvPassengerVehicleSchema>;
  * Represents a schema for a commercial vehicle.
  */
 export const AjvCommercialVehicleSchema = AjvVehicleSchema.extend({
-  commercialCapacity: s.number(),
+  cargoCapacity: s.number(),
 });
 
 /**

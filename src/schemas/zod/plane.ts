@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ZodPassengerVehicleSchema, ZodVehicleSchema } from './vehicle';
+import { ZodCommercialVehicleSchema, ZodPassengerVehicleSchema, ZodVehicleSchema } from './vehicle';
 
 /**
  * ZodPlaneSchema represents the schema for a plane object.
@@ -21,11 +21,7 @@ export type ZodPlane = z.infer<typeof ZodPlaneSchema>;
  * ZodCargoPlaneSchema represents the schema for a cargo plane in the Zod library.
  * It includes the cargo capacity of the plane.
  */
-export const ZodCargoPlaneSchema = z
-  .object({
-    cargoCapacity: z.number(),
-  })
-  .merge(ZodPlaneSchema);
+export const ZodCargoPlaneSchema = ZodCommercialVehicleSchema.merge(ZodPlaneSchema);
 
 /**
  * Represents a ZodCargoPlane.
