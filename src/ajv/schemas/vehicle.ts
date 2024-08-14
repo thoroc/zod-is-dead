@@ -1,5 +1,7 @@
 import { s } from 'ajv-ts';
 
+import { TravelType } from '../../common';
+
 /**
  * AjvVehicleSchema represents the schema for a vehicle object.
  * It defines the properties make, model, and year.
@@ -8,7 +10,7 @@ export const AjvVehicleSchema = s.object({
   make: s.string(),
   model: s.string(),
   year: s.number(),
-  travelsOver: s.enum(['land', 'sea', 'air']),
+  travelsOver: s.enum(TravelType),
 });
 
 /**

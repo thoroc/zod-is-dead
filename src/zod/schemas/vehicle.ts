@@ -1,5 +1,8 @@
 import { z } from 'zod';
 
+import { TravelType } from '../../common';
+import { getEnumValues } from '../utils';
+
 /**
  * ZodVehicleSchema represents the schema for a vehicle object.
  * It defines the properties make, model, and year.
@@ -8,7 +11,7 @@ export const ZodVehicleSchema = z.object({
   make: z.string(),
   model: z.string(),
   year: z.number(),
-  travelsOver: z.enum(['land', 'sea', 'air']),
+  travelsOver: z.enum(getEnumValues(TravelType)),
 });
 
 /**

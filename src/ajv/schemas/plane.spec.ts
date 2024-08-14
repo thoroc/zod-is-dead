@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { purgeUnknowProperties } from './fix';
+import { TravelType } from '../../common';
+import { purgeUnknowProperties } from '../fix';
 import {
   AjvCargoPlane,
   AjvCargoPlaneSchema,
@@ -18,7 +19,7 @@ describe('Plane schema', () => {
       year: 2020,
       wingspan: 68.4,
       engines: 4,
-      travelsOver: 'air',
+      travelsOver: TravelType.Air,
     };
 
     purgeUnknowProperties(AjvPlaneSchema['_schema'].properties);
@@ -35,7 +36,7 @@ describe('Cargo plane schema', () => {
       year: 2020,
       wingspan: 68.4,
       engines: 4,
-      travelsOver: 'air',
+      travelsOver: TravelType.Air,
       cargoCapacity: 10000,
     };
 
@@ -53,7 +54,7 @@ describe('Passenger plane schema', () => {
       year: 2020,
       wingspan: 68.4,
       engines: 4,
-      travelsOver: 'air',
+      travelsOver: TravelType.Air,
       seatingCapacity: 500,
     };
 

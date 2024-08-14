@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker';
 
 import { describe, expect, it } from 'vitest';
 
+import { TravelType } from '../../common';
 import { ZodCar, ZodCarSchema } from './car';
 
 describe('Car schema', () => {
@@ -12,7 +13,7 @@ describe('Car schema', () => {
       year: 2020,
       seatingCapacity: 5,
       bootSize: 500,
-      travelsOver: 'land',
+      travelsOver: TravelType.Land,
     };
 
     expect(ZodCarSchema.parse(car)).toEqual(car);

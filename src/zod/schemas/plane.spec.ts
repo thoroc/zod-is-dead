@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import { TravelType } from '../../common';
 import {
   ZodCargoPlane,
   ZodCargoPlaneSchema,
@@ -17,7 +18,7 @@ describe('Plane schema', () => {
       year: 2020,
       wingspan: 68.4,
       engines: 4,
-      travelsOver: 'air',
+      travelsOver: TravelType.Air,
     };
 
     expect(ZodPlaneSchema.parse(plane)).toEqual(plane);
@@ -32,7 +33,7 @@ describe('Cargo plane schema', () => {
       year: 2020,
       wingspan: 68.4,
       engines: 4,
-      travelsOver: 'air',
+      travelsOver: TravelType.Air,
       cargoCapacity: 10000,
     };
 
@@ -48,7 +49,7 @@ describe('Passenger plane schema', () => {
       year: 2020,
       wingspan: 68.4,
       engines: 4,
-      travelsOver: 'air',
+      travelsOver: TravelType.Air,
       seatingCapacity: 500,
     };
 
