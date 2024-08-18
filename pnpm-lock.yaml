@@ -10,7 +10,7 @@ dependencies:
     version: 8.17.1
   ajv-ts:
     specifier: ^0.7.0
-    version: 0.7.0(typescript@5.5.4)
+    version: 0.7.1(typescript@5.5.4)
   zod:
     specifier: ^3.23.8
     version: 3.23.8
@@ -1051,8 +1051,8 @@ packages:
       ajv: 8.16.0
     dev: false
 
-  /ajv-ts@0.7.0(typescript@5.5.4):
-    resolution: {integrity: sha512-8xSipon5zkQOFwUomKEM7EvxmPldcD6QjwHC1+B0LsmswXujYLfUKKgVxwDGpbIokqSzywrSN/1aZ9Y9u23H4Q==}
+  /ajv-ts@0.7.1(typescript@5.5.4):
+    resolution: {integrity: sha512-bhd586DhaqTWhmLSLZupzgu2lAbhcz31vhs58aP6xYT31KWzW6EkZHCYtFp69mCHbzANJlIGIGeoTEcIiJGPbw==}
     peerDependencies:
       typescript: '>=5.0.0'
     dependencies:
