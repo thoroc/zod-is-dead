@@ -9,8 +9,8 @@ dependencies:
     specifier: ^8.17.1
     version: 8.17.1
   ajv-ts:
-    specifier: ^0.7.0
-    version: 0.7.0(typescript@5.5.4)
+    specifier: ^0.9.0
+    version: 0.9.0(typescript@5.5.4)
   zod:
     specifier: ^3.23.8
     version: 3.23.8
@@ -1051,14 +1051,15 @@ packages:
       ajv: 8.16.0
     dev: false
 
-  /ajv-ts@0.7.0(typescript@5.5.4):
-    resolution: {integrity: sha512-8xSipon5zkQOFwUomKEM7EvxmPldcD6QjwHC1+B0LsmswXujYLfUKKgVxwDGpbIokqSzywrSN/1aZ9Y9u23H4Q==}
+  /ajv-ts@0.9.0(typescript@5.5.4):
+    resolution: {integrity: sha512-Bte5yTOdStP9CIG6ps/QKBIx9CtQKjoPSS3BTG5ORp693zS0THIAUI2mW+0xlw1hsY2MkZIa32dEgMprzjsTkw==}
     peerDependencies:
       typescript: '>=5.0.0'
     dependencies:
       ajv: 8.16.0
       ajv-errors: 3.0.0(ajv@8.16.0)
       ajv-formats: 3.0.1(ajv@8.16.0)
+      type-fest: 4.26.0
       typescript: 5.5.4
     dev: false
 
@@ -2309,6 +2310,11 @@ packages:
     dependencies:
       prelude-ls: 1.2.1
     dev: true
+
+  /type-fest@4.26.0:
+    resolution: {integrity: sha512-OduNjVJsFbifKb57UqZ2EMP1i4u64Xwow3NYXUtBbD4vIwJdQd4+xl8YDou1dlm4DVrtwT/7Ky8z8WyCULVfxw==}
+    engines: {node: '>=16'}
+    dev: false
 
   /typescript-eslint@8.1.0(eslint@9.9.0)(typescript@5.5.4):
     resolution: {integrity: sha512-prB2U3jXPJLpo1iVLN338Lvolh6OrcCZO+9Yv6AR+tvegPPptYCDBIHiEEUdqRi8gAv2bXNKfMUrgAd2ejn/ow==}
